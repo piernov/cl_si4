@@ -97,7 +97,7 @@ node.write(img.node(image))
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{COO — Équipe 6}
-\author{Cancela Joël\\Bounouas Nassim\\Mortara Johan\\Novac Pierre-Emmanuel}
+\author{Cancela Joël\\Bounouas Nassim\\Mortara Johann\\Novac Pierre-Emmanuel}
 
 
 \begin{document}
@@ -118,24 +118,27 @@ node.write(img.node(image))
 \section{Cas d'utilisation: Emprunter un livre}
 
 \noindent\textbf{Nom:} Emprunter un livre \\
-\textbf{Description:} \\
-\textbf{Précondition:}\\
-\textbf{Postcondition:}\\
-\textbf{Cas d'erreur:}\\
-\textbf{État du système en cas d'erreur:}\\
+\textbf{Description:} La bibliothécaire enregistre l'emprunt d'un livre.\\
+\textbf{Précondition:} La bibliothécaire dispose du numéro du livre et du numéro de l'individu.\\
+\textbf{Postcondition:} L'emprunt est validé.\\
+\textbf{Cas d'erreur:} Le livre n’existe pas, le livre est déjà emprunté, l’individu n’existe pas, l’individu est suspendu ou l’individu a déjà emprunté 3 livres.\\
+\textbf{État du système en cas d'erreur:} L’emprunt n'est pas validé.\\
 \textbf{Acteurs:} La bibliothécaire \\
-\textbf{Déclenchement:}\\
+\textbf{Déclenchement:} La bibliothécaire reçoit une demande d'emprunt d'un livre de la part d'un individu.\\
 \textbf{Scénario primaire:}
 \begin{enumerate}
-	\item
-	\item
-	\item
-	\item
+	\item La bibliothécaire entre le numéro du document et le numéro de l'individu dans l'interface de la Bibliothèque.
+	\item La Bibliothèque recherche l'individu dans l'Annuaire.
+	\item La Bibliothèque recherche le livre dans le Fonds de bibliothèque.
+	\item Le livre est disponible, l'étudiant n'est pas suspendu et a moins de 3 emprunts.
+	\item La Bibliothèque enregistre l'emprunt.
 \end{enumerate}
 
 \noindent\textbf{Scénario alternatif:}
 \begin{itemize}
-	\item[3'.]
+	\item[2'.] L’étudiant n’existe pas, fin du cas d’utilisation.
+	\item[3'.] Le livre n’existe pas, fin du cas d’utilisation.
+	\item[4'.] Le livre est déjà emprunté, l’individu est suspendu ou l’individu a déjà emprunté 3 livres, fin du cas d’utilisation.
 \end{itemize}
 
 
@@ -180,7 +183,7 @@ node.write(img.node(image))
 \begin{itemize}
 	\item \textbf{Cancela Joël}
 	\item \textbf{Bounouas Nassim}
-	\item \textbf{Mortara Johan}
+	\item \textbf{Mortara Johann}
 	\item \textbf{Novac Pierre-Emmanuel}
 \end{itemize}
 
