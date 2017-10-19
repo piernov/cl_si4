@@ -115,12 +115,12 @@ node.write(img.node(image))
 \hspace*{-8em}\includegraphics[scale=1.5]{use_case}
 \vspace*{-4em}
 
-\section{Cas d'utilisation: Emprunter un livre}
+\section{Cas d'utilisation: Enregistrer un emprunt}
 
-\noindent\textbf{Nom:} Emprunter un livre \\
-\textbf{Description:} La bibliothécaire enregistre l'emprunt d'un livre.\\
-\textbf{Précondition:} La bibliothécaire dispose du numéro du livre et du numéro de l'individu.\\
-\textbf{Postcondition:} L'emprunt est validé.\\
+\noindent\textbf{Nom:} Enregistrer un emprunt \\
+\textbf{Description:} Un individu souhaite emprunter un livre.\\
+\textbf{Précondition:} \\
+\textbf{Postcondition:} Le livre est emprunté.\\
 \textbf{Cas d'erreur:} Le livre n’existe pas, le livre est déjà emprunté, l’individu n’existe pas, l’individu est suspendu ou l’individu a déjà emprunté 3 livres.\\
 \textbf{État du système en cas d'erreur:} L’emprunt n'est pas validé.\\
 \textbf{Acteurs:} La bibliothécaire \\
@@ -128,10 +128,10 @@ node.write(img.node(image))
 \textbf{Scénario primaire:}
 \begin{enumerate}
 	\item La bibliothécaire entre le numéro du document et le numéro de l'individu dans l'interface de la Bibliothèque.
-	\item La Bibliothèque recherche l'individu dans l'Annuaire.
-	\item La Bibliothèque recherche le livre dans le Fonds de bibliothèque.
-	\item Le livre est disponible, l'étudiant n'est pas suspendu et a moins de 3 emprunts.
-	\item La Bibliothèque enregistre l'emprunt.
+	\item[1] La Bibliothèque recherche l'individu dans l'Annuaire.
+	\item[2] La Bibliothèque recherche le livre dans le Fonds de bibliothèque.
+	\item[3] Le livre est disponible, l'étudiant n'est pas suspendu et a moins de 3 emprunts.
+	\item[4] La Bibliothèque enregistre l'emprunt.
 \end{enumerate}
 
 \noindent\textbf{Scénario alternatif:}
@@ -179,12 +179,15 @@ node.write(img.node(image))
 \section{Diagrammes d'état}
 
 \section{Auto-évaluation}
-
 \begin{itemize}
-	\item \textbf{Cancela Joël}
-	\item \textbf{Bounouas Nassim}
-	\item \textbf{Mortara Johann}
-	\item \textbf{Novac Pierre-Emmanuel}
+	\item \textbf{Cancela Joël 95pts}
+		Joël a travaillé sur le diagramme des cas d'utilisation, le diagramme de cas d'utilisation détaillé avec Johann, le(s) diagrammes d'états et la rédaction du rapport.
+	\item \textbf{Bounouas Nassim 95pts}
+		Nassim a travaillé sur le diagramme de classe, le diagramme de séquence "Enregistrer un retour" et la rédaction du rapport.
+	\item \textbf{Mortara Johann 95pts}
+		Johann a travaillé sur le diagramme de séquence "Enregistrer un emprunt", le diagramme de cas d'utilisation détaillé "Enregistrer un emprunt", et le diagramme de séquence "Réserver un livre".
+	\item \textbf{Novac Pierre-Emmanuel 115pts}
+		Pierre-Emmanuel a travaillé sur le diagramme de classe, les diagrammes de séquence "Relancer pour rendu de livre", "Rechercher un document" et sur la rédaction du rapport.
 \end{itemize}
 
 \end{document}
