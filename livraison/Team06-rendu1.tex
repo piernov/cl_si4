@@ -111,22 +111,17 @@ node.write(img.node(image))
 \section{Choix de conception}
 
 \paragraph{}
-La classe Livre représente une édition de livre alors qu'un exemplaire est un livre physique présent dans la bibliothèque. Cette relation est representée comme une association entre la classe Livre et la classe Exemplaire de livre. Un exemplaire n'est relié qu'à un seul livre mais un livre est relié à plusieurs exemplaires. Nous disposons d'un attribut calculé au sein du livre afin de connaitre le nombre d'exemplaires de ce livre présent dans la bibliothèque. La cote d'un exemplaire est representée par le numéro de document dont Livre hérite. Les détails concernant l'emprunt, la réservation et la perte sont donc dans l'exemplaire du fait de l'héritage de Document.
+La classe Livre représente une édition de livre alors qu'un exemplaire est un livre physique présent dans la bibliothèque. Cette relation est representée comme une association entre la classe Livre et la classe Exemplaire de livre. Un exemplaire n'est relié qu'à un seul livre mais un livre est relié à plusieurs exemplaires. Nous disposons d'un attribut calculé au sein du livre afin de connaitre le nombre d'exemplaires de ce livre présent dans la bibliothèque. La cote d'un exemplaire est representée par le numéro de document dont Exemplaire de livre hérite. Les détails concernant l'emprunt et  la réservation se retrouvent dans les classes d'associations Emprunt et Réservation.La perte se retrouve directement au sein de l'exemplaire. 
 
 \paragraph{}
-La raison principale de ce choix de modélisation est principalement dû à l'emprunt,
-car on emprunte un exemplaire de livre mais il est nécessaire de connaitre le nombre d'exemplaires disponibles ou total pour un livre et la responsabilité n'est pas à l'exemplaire de connaître les autres exemplaires.
+La raison principale de ce choix de modélisation est principalement dû à l'emprunt, car on emprunte un exemplaire de livre mais il est nécessaire de connaitre le nombre d'exemplaires disponibles ou total pour un livre et la responsabilité n'est pas à un exemplaire de connaître les autres exemplaires.
 
 \paragraph{}
-TO FINISH
-*Gestion du temps*
-Pour la gestion du temps, l'envoi des relances se fait chaque semaine passée le délai de rendu de l'emprunt à minuit.
+Pour la gestion du temps, l'envoi des relances se fait chaque semaine passée le délai de rendu de l'emprunt au Lundi minuit. Nous considérons que notre système a la capacité de connaitre la date courante sans faire appel à une horloge externe.
 
 
 \paragraph{}
-TO FINISH
-*la relation entre relance et emprunt, Joël*
-La classe *Emprunt* contient la date et le nombre de relances pour celui-ci, la relance étant gérée par le serveur de messages nous avons choisi de ne pas modéliser de classe *Relance*, mais de préciser ses opérations dans le diagramme de séquence "Relancer pour rendu du livre".
+La classe Emprunt contient la date et le nombre de relances pour celui-ci, la relance étant gérée par le serveur de messages nous avons choisi de ne pas modéliser de classe Relance, mais de préciser ses opérations dans le diagramme de séquence "Relancer pour rendu du livre".
 
 
 \section{Diagramme de cas d'utilisation}
